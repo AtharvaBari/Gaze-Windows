@@ -1,0 +1,42 @@
+<UserControl x:Class="Gaze.Controls.CompanionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Gaze.Controls">
+    <Grid x:Name="RootGrid">
+        <!-- Z particles (shown during sleep) -->
+        <Canvas x:Name="ZCanvas" Visibility="Collapsed" IsHitTestVisible="False">
+            <TextBlock x:Name="SmallZ" Text="z" FontSize="9" FontWeight="Bold" 
+                       Foreground="#CCCCCC" Canvas.Left="30" Canvas.Top="0"/>
+            <TextBlock x:Name="BigZ" Text="Z" FontSize="13" FontWeight="Bold" 
+                       Foreground="#CCCCCC" Canvas.Left="22" Canvas.Top="5"/>
+        </Canvas>
+        
+        <!-- Eyes -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <local:EyeControl x:Name="LeftEye"/>
+                <!-- Magnifying glass for left eye peek -->
+                <TextBlock x:Name="LeftMagnifier" Text="🔍" FontSize="18" 
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Visibility="Collapsed" IsHitTestVisible="False"
+                           RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <RotateTransform Angle="15"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Grid>
+            <Grid Margin="8,0,0,0">
+                <local:EyeControl x:Name="RightEye"/>
+                <!-- Magnifying glass for right eye peek -->
+                <TextBlock x:Name="RightMagnifier" Text="🔍" FontSize="18" 
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Visibility="Collapsed" IsHitTestVisible="False"
+                           RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <RotateTransform Angle="15"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

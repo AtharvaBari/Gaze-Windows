@@ -1,0 +1,24 @@
+## .NET / Visual Studio
+[Bb]in/
+[Oo]bj/
+[Oo]utput/
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+*.pdb
+*.dll
+*.exe
+
+## Installer
+*.iss
+*.ico
+
+## OS Files
+.DS_Store
+Thumbs.db
+
+## IDE
+.idea/
+*.sln.docstates

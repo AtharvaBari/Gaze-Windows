@@ -1,0 +1,72 @@
+<UserControl x:Class="Gaze.Controls.IslandControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Gaze.Controls"
+             MouseEnter="OnMouseEnter" MouseLeave="OnMouseLeave">
+    <Grid x:Name="RootGrid" Background="Transparent" ClipToBounds="False">
+        <!-- The Dynamic Island pill shape -->
+        <Border x:Name="IslandPill"
+                Background="Black"
+                CornerRadius="18"
+                Width="12" Height="12"
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                Margin="0,-20,0,0"
+                Opacity="0">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" BlurRadius="12" ShadowDepth="2" Opacity="0.4"/>
+            </Border.Effect>
+            
+            <!-- Content inside the island -->
+            <Grid x:Name="ContentGrid" Opacity="0" ClipToBounds="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Left: Eyes / Play-Pause -->
+                <Grid Grid.Column="0" ClipToBounds="True" Margin="12,0,0,0">
+                    <local:CompanionControl x:Name="Companion" 
+                                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    
+                    <Button x:Name="PlayPauseBtn" 
+                            Content="▶" FontSize="14" FontWeight="Medium"
+                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                            Background="Transparent" BorderBrush="Transparent"
+                            Foreground="#CCFFFFFF" Opacity="0" Click="PlayPause_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="Transparent">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+                
+                <!-- Center: Spacer -->
+                <Grid Grid.Column="1"/>
+                
+                <!-- Right: Timer / Stop -->
+                <Grid Grid.Column="2" ClipToBounds="True" Margin="0,0,12,0">
+                    <local:TimerDisplayControl x:Name="TimerDisplay" 
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    
+                    <Button x:Name="StopBtn"
+                            Content="■" FontSize="14" FontWeight="Medium"
+                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                            Background="Transparent" BorderBrush="Transparent"
+                            Foreground="#CCFFFFFF" Opacity="0" Click="Stop_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="Transparent">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
