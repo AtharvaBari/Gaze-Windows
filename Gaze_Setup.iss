@@ -4,7 +4,7 @@
 [Setup]
 AppId={{D3E8C1F2-BC12-4587-9F33-9DBA3F5DCBF8}}
 AppName=Gaze
-AppVersion=1.0.1
+AppVersion=1.0.2
 AppPublisher=Atharva Bari
 AppPublisherURL=https://github.com/AtharvaBari/Gaze-Windows
 AppSupportURL=https://github.com/AtharvaBari/Gaze-Windows
@@ -13,7 +13,7 @@ DefaultDirName={autopf}\Gaze
 DefaultGroupName=Gaze
 AllowNoIcons=yes
 ; The installer file name
-OutputBaseFilename=Gaze_Windows_v1.0.1
+OutputBaseFilename=Gaze_Windows_v1.0.2
 ; Visuals
 SetupIconFile=Gaze\icon.ico
 Compression=lzma
