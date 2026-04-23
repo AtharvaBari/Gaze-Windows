@@ -27,13 +27,12 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "Gaze\bin\Release\net8.0-windows\win-x64\publish\Gaze.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "Gaze\bin\Release\net8.0-windows\win-x64\publish\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "Gaze\icon.png"; DestDir: "{app}"; Flags: ignoreversion
-; Add any other files from the publish folder here
 
 [Icons]
-Name: "{group}\Gaze"; Filename: "{app}\Gaze.exe"
-Name: "{autodesktop}\Gaze"; Filename: "{app}\Gaze.exe"; Tasks: desktopicon
+Name: "{group}\Gaze"; Filename: "{app}\Gaze.exe"; WorkingDir: "{app}"
+Name: "{autodesktop}\Gaze"; Filename: "{app}\Gaze.exe"; Tasks: desktopicon; WorkingDir: "{app}"
 
 [Run]
-Filename: "{app}\Gaze.exe"; Description: "{cm:LaunchProgram,Gaze}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\Gaze.exe"; Description: "{cm:LaunchProgram,Gaze}"; Flags: nowait postinstall skipifsilent; WorkingDir: "{app}"
