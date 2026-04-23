@@ -30,7 +30,7 @@ public class UpdateManager
         }
     };
 
-    public string CurrentVersion { get; } = "1.0.0";
+    public string CurrentVersion { get; } = "1.0.1";
 
     // State properties
     public bool IsChecking { get; private set; }

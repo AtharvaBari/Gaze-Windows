@@ -9,7 +9,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>Gaze</AssemblyName>
     <RootNamespace>Gaze</RootNamespace>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Atharva Bari</Authors>
     <Description>The Premium Productivity Companion for your Desktop.</Description>
     <ApplicationIcon>icon.ico</ApplicationIcon>

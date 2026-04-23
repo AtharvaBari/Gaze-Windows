@@ -180,7 +180,7 @@
                         </Border>
                         <StackPanel Margin="12,0,0,0" VerticalAlignment="Center">
                             <TextBlock Text="Gaze" FontSize="16" FontWeight="Bold" Foreground="White"/>
-                            <TextBlock x:Name="VersionLabel" Text="v1.0.0" FontSize="10" Foreground="#555555"/>
+                            <TextBlock x:Name="VersionLabel" Text="v1.0.1" FontSize="10" Foreground="#555555"/>
                         </StackPanel>
                     </StackPanel>
                     
@@ -369,7 +369,7 @@
                     <Grid>
                         <StackPanel>
                             <TextBlock Text="Current Version" Style="{StaticResource SettingLabel}"/>
-                            <TextBlock x:Name="CurrentVersionText" Text="v1.0.0" FontSize="22" FontWeight="Bold"
+                            <TextBlock x:Name="CurrentVersionText" Text="v1.0.1" FontSize="22" FontWeight="Bold"
                                        Foreground="#A78BFA" Margin="0,4,0,0"/>
                         </StackPanel>
                         <Button x:Name="CheckUpdateBtn" Content="Check for Updates" 
